@@ -2,7 +2,7 @@ import http from "k6/http";
 import { check, sleep } from "k6";
 
 // Backend URL
-const url = "http://192.168.1.8:5000/api/login";
+const url = "http://192.168.22.239:5000/api/login";
 
 // Simulated users
 const users = [
@@ -13,8 +13,8 @@ const users = [
 ];
 
 export const options = {
-    vus: 10,       // 10 virtual users
-    duration: "10s" // run for 30 seconds
+    vus: 200,       // 10 virtual users
+    duration: "20s" // run for 30 seconds
 };
 
 export default function () {
