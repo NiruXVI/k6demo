@@ -25,8 +25,8 @@ python app.py
 # Run frontend
 
 cd frontend
-npx create-expo-app .
-npm install expo react-native
+npm init -y
+npm install expo react react-native
 npx expo start
 
 # Run k6
