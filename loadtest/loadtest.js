@@ -3,7 +3,7 @@ import http from "k6/http";           // For making HTTP requests
 import { check, sleep } from "k6";    // check: for assertions, sleep: for delays
 
 // Backend URL - the endpoint we want to load test
-const url = "http://192.168.22.239:5000/api/login";
+const url = "http://192.168.1.8:5000/api/login";
 
 // Array of simulated users with different credentials
 // This allows testing with multiple user accounts to simulate real-world scenarios
@@ -16,7 +16,7 @@ const users = [
 
 // Test configuration options
 export const options = {
-    vus: 200,       // Number of Virtual Users (VUs) - simulates 200 concurrent users
+    vus: 600,       // Number of Virtual Users (VUs) - simulates 200 concurrent users
     duration: "20s" // How long to run the test - 20 seconds total
 };
 
