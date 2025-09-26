@@ -22,6 +22,14 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
 
+# Test the /api/login route
+
+Invoke-WebRequest -Uri "http://localhost:5000/api/login" `
+  -Method POST `
+  -Body '{"email":"test@example.com","password":"1234"}' `
+  -ContentType "application/json"
+
+
 # Run frontend
 
 cd frontend
