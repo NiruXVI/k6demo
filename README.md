@@ -25,6 +25,7 @@ python app.py
 # Run frontend
 
 cd frontend
+npx create-expo-app .
 npm install expo react-native
 npx expo start
 
