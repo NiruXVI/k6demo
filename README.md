@@ -1,3 +1,8 @@
+# K6 Direct Installation
+
+https://github.com/grafana/k6/releases
+
+
 # Project Layout
 
 demo-project/
