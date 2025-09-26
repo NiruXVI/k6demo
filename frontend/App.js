@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, AppRegistry } from "react-native";
 
 export default function App() {
   const [email, setEmail] = useState("");
@@ -7,7 +7,7 @@ export default function App() {
   const [status, setStatus] = useState("");
 
   const handleLogin = () => {
-    fetch("http://192.168.1.8:5000/api/login", {
+    fetch("http://192.168.22.239:5000/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -45,3 +45,6 @@ const styles = StyleSheet.create({
   input: { width: "100%", borderWidth: 1, borderColor: "#ccc", padding: 10, marginBottom: 10, borderRadius: 5 },
   status: { marginTop: 20, fontSize: 18 },
 });
+
+// Register the app component
+AppRegistry.registerComponent('main', () => App);
